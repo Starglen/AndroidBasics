@@ -29,6 +29,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.navigation.ROUT_ITEM
+import com.navigation.ROUT_START
 import com.starglen.zawadimart.R
 import com.starglen.zawadimart.ui.theme.neworange
 
@@ -69,7 +71,9 @@ fun StartScreen(navController: NavController){
         )
         Spacer(modifier = Modifier.height(20.dp))
         Button(
-            onClick = {},
+            onClick = {
+                navController.navigate(ROUT_ITEM)
+            },
             shape = RoundedCornerShape(10.dp),
             colors = ButtonDefaults.buttonColors(neworange),
             modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp)
