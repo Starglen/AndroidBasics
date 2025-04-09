@@ -8,10 +8,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.navigation.ROUT_HOME
 import com.navigation.ROUT_ABOUT
+import com.navigation.ROUT_DASHBOARD
 import com.navigation.ROUT_INTENT
 import com.navigation.ROUT_ITEM
 import com.navigation.ROUT_START
 import com.starglen.zawadimart.ui.screens.about.AboutScreen
+import com.starglen.zawadimart.ui.screens.dashboard.DashboardScreen
 import com.starglen.zawadimart.ui.screens.home.HomeScreen
 import com.starglen.zawadimart.ui.screens.intent.IntentScreen
 import com.starglen.zawadimart.ui.screens.items.ItemsScreen
@@ -45,6 +47,10 @@ fun AppNavHost(
 
         composable(ROUT_INTENT) {
             IntentScreen(navController)
+        }
+
+        composable(ROUT_DASHBOARD) {
+            DashboardScreen(navController)
         }
 
     }
