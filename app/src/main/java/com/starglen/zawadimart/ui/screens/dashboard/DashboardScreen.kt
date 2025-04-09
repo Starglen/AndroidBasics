@@ -3,6 +3,7 @@ package com.starglen.zawadimart.ui.screens.dashboard
 import android.graphics.drawable.shapes.Shape
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,7 +30,9 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -37,6 +40,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.navigation.ROUT_ABOUT
+import com.navigation.ROUT_HOME
+import com.navigation.ROUT_INTENT
+import com.navigation.ROUT_ITEM
 import com.starglen.zawadimart.R
 import com.starglen.zawadimart.ui.theme.neworange
 import com.starglen.zawadimart.ui.theme.newwhite
@@ -77,7 +84,7 @@ fun DashboardScreen(navController: NavController){
                 modifier = Modifier
                     .fillMaxWidth()
                     .align(alignment = Alignment.BottomCenter)
-                    .height(180.dp)
+                    .height(250.dp)
                     .padding(start = 20.dp, end = 20.dp)
                     .offset(y = 90.dp)
             ) {
@@ -100,10 +107,10 @@ fun DashboardScreen(navController: NavController){
                     .width(200.dp)
                     .height(180.dp)
                     .padding(start = 20.dp, end = 20.dp)
-                    
+                    .clickable{navController.navigate(ROUT_HOME)}
             ) {
                 Column(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize().background(newwhite),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
 
@@ -124,10 +131,10 @@ fun DashboardScreen(navController: NavController){
                     .width(200.dp)
                     .height(180.dp)
                     .padding(end = 20.dp)
-
+                    .clickable{navController.navigate(ROUT_ITEM)}
             ) {
                 Column(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize().background(newwhite),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
@@ -155,10 +162,10 @@ fun DashboardScreen(navController: NavController){
                     .width(200.dp)
                     .height(180.dp)
                     .padding(start = 20.dp, end = 20.dp)
-
+                    .clickable{navController.navigate(ROUT_INTENT)}
             ) {
                 Column(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize().background(newwhite),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
 
@@ -179,10 +186,10 @@ fun DashboardScreen(navController: NavController){
                     .width(200.dp)
                     .height(180.dp)
                     .padding(end = 20.dp)
-
+                    .clickable{navController.navigate(ROUT_ABOUT)}
             ) {
                 Column(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize().background(newwhite),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
