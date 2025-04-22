@@ -44,6 +44,7 @@ import com.navigation.ROUT_ABOUT
 import com.navigation.ROUT_HOME
 import com.navigation.ROUT_INTENT
 import com.navigation.ROUT_ITEM
+import com.navigation.ROUT_WELCOME
 import com.starglen.zawadimart.R
 import com.starglen.zawadimart.ui.theme.neworange
 import com.starglen.zawadimart.ui.theme.newwhite
@@ -123,6 +124,30 @@ fun DashboardScreen(navController: NavController){
                     )
 
                     Text(text = "Home", fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
+                }
+            }
+
+            Card(
+                modifier = Modifier
+                    .width(200.dp)
+                    .height(180.dp)
+                    .padding(start = 20.dp, end = 20.dp)
+                    .clickable{navController.navigate(ROUT_WELCOME)}
+            ) {
+                Column(
+                    modifier = Modifier.fillMaxSize().background(newwhite),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+
+                ) {
+                    Image(
+                        painter = painterResource(R.drawable.home),
+                        contentDescription = "img",
+                        modifier = Modifier.size(100.dp),
+                        contentScale = ContentScale.FillWidth
+                    )
+
+                    Text(text = "WelcomeScrn", fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
                 }
             }
         //Card Two
