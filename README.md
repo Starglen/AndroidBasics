@@ -1,48 +1,56 @@
 # Android Basics
 
-A beginner-friendly Android development study repo focused on building practical understanding of Android UI, app structure, and core mobile concepts.
+This repo is now structured as a practical Android learning resource for beginners. It focuses on the parts of Android that most learners need first: project structure, UI basics, Compose, navigation, lifecycle, data handling, and small app-building exercises.
 
 ## What this repo covers
 
 - Android project structure
-- Activities and layout files
-- Views and UI basics
-- Intents and navigation
-- State and lifecycle
-- RecyclerView basics
-- Simple app architecture patterns
+- `MainActivity` and Compose UI
+- Layouts and screen composition
+- Buttons, text, cards, and lists
+- Navigation basics
+- State and simple app logic
+- Learning modules and study checkpoints
+- A small practical app structure that can be expanded into a real project
 
 ## Project structure
 
-- `app/src/main/java` — Kotlin source code
-- `app/src/main/res` — layouts, strings, images, and assets
-- `app/src/main/AndroidManifest.xml` — app configuration
+- `app/src/main/java/com/starglen/zawadimart` — app code and study examples
+- `app/src/main/res` — XML resources, values, and assets
+- `app/src/main/AndroidManifest.xml` — app metadata and configuration
 
-## Quick start
+## Learning path
 
-1. Open the project in Android Studio.
-2. Let Gradle sync.
-3. Run the app on an emulator or physical device.
+1. Understand Android Studio and the project tree.
+2. Learn `MainActivity` and Compose screens.
+3. Build a simple screen with text and buttons.
+4. Add state and user interaction.
+5. Explore navigation and multiple screens.
+6. Create a list-based screen with reusable cards.
+7. Apply what you learn to a practical project.
 
-## Suggested learning path
+## Included content
 
-1. Understand Android Studio and project structure
-2. Learn activities and layout XML
-3. Work with buttons, text fields, and listeners
-4. Explore intents and screen navigation
-5. Learn lifecycle and state handling
-6. Build a RecyclerView list screen
-7. Add data persistence or local storage
-8. Build a small practical app from scratch
+This branch includes a practical sample home screen that explains the learning modules, plus a structured set of app ideas you can build next.
 
-## Practice ideas
+## Suggested practice projects
 
-- Create a counter app
-- Build a simple login screen
-- Make a to-do list app with add and delete actions
-- Display a list of items using RecyclerView
-- Create a profile screen with editable user info
+- Counter app
+- To-do list app
+- Student records screen
+- Product catalog list
+- Profile screen with editable fields
 
-## Why this repo is useful
+## Good next steps
 
-This repo helps you move from static examples to a real Android development workflow. It is useful for students and beginners learning how Android apps are built and how app features fit together.
+- Add a `LoginScreen` using input fields.
+- Add a `ProfileScreen` with editable text.
+- Add a `TaskListScreen` using Compose lists.
+- Add a `DetailScreen` to show item information.
+
+## Useful references
+
+- Android docs: https://developer.android.com/docs
+- Compose basics: https://developer.android.com/jetpack/compose
+- Activity lifecycle: https://developer.android.com/guide/components/activities/activity-lifecycle
+- Navigation: https://developer.android.com/guide/navigation
